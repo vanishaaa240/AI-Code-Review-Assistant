@@ -1,0 +1,221 @@
+.feedback-container {
+    margin-top: 40px;
+}
+
+.feedback-container h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* =======================
+   AI SCORE CARD
+======================= */
+
+.score-card {
+    background: #1f2937;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    color: white;
+    border: 1px solid #374151;
+}
+
+.score-card h3 {
+    margin: 0;
+    color: #8b5cf6;
+}
+
+.score-value {
+    font-size: 46px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.score-bar {
+    width: 100%;
+    height: 14px;
+    background: #374151;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.score-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+    transition: width 0.8s ease;
+}
+
+.score-text {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* =======================
+   FEEDBACK GRID
+======================= */
+
+.feedback-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.feedback-card{
+
+    background:var(--card-color);
+    color:var(--text-color);
+    border:1px solid var(--border);
+
+}
+
+.feedback-card h3 {
+    color: #8b5cf6;
+    margin-bottom: 15px;
+}
+
+.feedback-card ul {
+    padding-left: 20px;
+}
+
+.feedback-card li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* =======================
+   CORRECTED CODE
+======================= */
+
+.code-card {
+    grid-column: 1 / 3;
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.copy-btn {
+    background: #8b5cf6;
+    color: white;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.copy-btn:hover {
+    background: #7c3aed;
+    transform: translateY(-2px);
+}
+
+.copy-btn:active {
+    transform: scale(0.96);
+}
+
+.code-card pre {
+    background: #111827;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+
+    text-align: left;
+    white-space: pre-wrap;
+    word-break: break-word;
+
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 15px;
+    line-height: 1.6;
+
+    margin: 0;
+
+    border: 1px solid #374151;
+}
+.code-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.download-btn{
+    background:#10b981;
+    color:white;
+    border:none;
+    padding:8px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:600;
+}
+
+.download-btn:hover{
+    background:#059669;
+}
+.code-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.download-btn{
+    background:#10b981;
+    color:white;
+    border:none;
+    padding:8px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    background:#059669;
+}
+
+.feedback-card ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+.feedback-card li{
+    margin-bottom:12px;
+    line-height:1.6;
+}
+/* =======================
+   INTERVIEW + TOPICS
+======================= */
+
+.feedback-card ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.feedback-card li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.feedback-card p {
+    color: #d1d5db;
+}
+
+.feedback-card:last-child {
+    grid-column: 1 / 3;
+}
+.pdf-btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:8px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:600;
+}
+
+.pdf-btn:hover{
+    background:#1d4ed8;
+}

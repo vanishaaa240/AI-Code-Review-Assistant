@@ -1,0 +1,76 @@
+.settings-container{
+    padding:30px;
+    color:white;
+}
+
+.settings-container h1{
+    margin-bottom:30px;
+    color:#8b5cf6;
+}
+
+.setting-card{
+    background:#1f2937;
+    border:1px solid #374151;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:25px;
+    transition:.3s;
+}
+
+.setting-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.setting-card h3{
+    color:#8b5cf6;
+    margin-bottom:15px;
+}
+
+.setting-card p{
+    color:#d1d5db;
+    margin-bottom:10px;
+    line-height:1.6;
+}
+
+.setting-card ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+.setting-card li{
+    margin-bottom:8px;
+    color:#d1d5db;
+}
+
+.danger-btn{
+    margin-top:15px;
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.danger-btn:hover{
+    background:#dc2626;
+    transform:translateY(-2px);
+}
+
+body.light .setting-card{
+    background:white;
+    border:1px solid #d1d5db;
+}
+
+body.light .setting-card p,
+body.light .setting-card li{
+    color:#374151;
+}
+
+body.light .settings-container{
+    color:#111827;
+}

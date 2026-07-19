@@ -1,0 +1,35 @@
+.help-container{
+    padding:30px;
+    color:white;
+}
+
+.help-container h1{
+    margin-bottom:25px;
+}
+
+.help-card{
+    background:#1f2937;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:20px;
+    border:1px solid #374151;
+}
+
+.help-card h2{
+    color:#8b5cf6;
+    margin-bottom:15px;
+}
+
+.help-card ul,
+.help-card ol{
+    padding-left:20px;
+}
+
+.help-card li{
+    margin-bottom:10px;
+    line-height:1.6;
+}
+
+.help-card p{
+    line-height:1.7;
+}

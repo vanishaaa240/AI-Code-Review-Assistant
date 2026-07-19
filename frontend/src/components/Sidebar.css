@@ -1,0 +1,35 @@
+.sidebar{
+
+    background:var(--card-color);
+    color:var(--text-color);
+    border-right:1px solid var(--border);
+
+}
+.sidebar h2 {
+  margin-bottom: 30px;
+  color: #8b5cf6;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.sidebar li:hover {
+  background: #374151;
+}
+
+.sidebar li.active {
+  background: #8b5cf6;
+  color: white;
+  font-weight: bold;
+}

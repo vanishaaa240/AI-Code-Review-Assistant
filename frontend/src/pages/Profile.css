@@ -1,0 +1,346 @@
+.profile-container{
+    display:flex;
+    justify-content:center;
+    padding:40px;
+}
+
+.profile-card{
+
+    width:100%;
+    max-width:800px;
+
+    background:#1f2937;
+    color:white;
+
+    border-radius:20px;
+    padding:40px;
+
+    border:1px solid #374151;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+
+}
+
+.profile-card h2{
+
+    text-align:center;
+    color:#8b5cf6;
+
+    margin-bottom:30px;
+
+}
+
+/* Avatar */
+
+.avatar-section{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.big-avatar{
+
+    width:170px;
+    height:170px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:5px solid #8b5cf6;
+
+    margin-bottom:20px;
+
+    box-shadow:0 0 25px rgba(139,92,246,.4);
+
+}
+
+.big-avatar-img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.avatar-section h3{
+
+    margin-bottom:15px;
+
+}
+
+.avatar-list{
+
+    display:flex;
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+.avatar-img{
+
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    cursor:pointer;
+
+    border:3px solid transparent;
+
+    transition:.3s;
+
+}
+
+.avatar-img:hover{
+
+    transform:scale(1.08);
+
+}
+
+.active-avatar{
+
+    border:3px solid #8b5cf6;
+
+    transform:scale(1.08);
+
+}
+
+/* Form */
+
+.profile-card label{
+
+    display:block;
+
+    margin-top:18px;
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.profile-card input,
+.profile-card textarea{
+
+    width:100%;
+
+    padding:13px;
+
+    border-radius:10px;
+
+    border:1px solid #374151;
+
+    background:#111827;
+
+    color:white;
+
+    outline:none;
+
+    font-size:15px;
+
+    box-sizing:border-box;
+
+}
+
+.profile-card input:disabled{
+
+    opacity:.8;
+
+}
+
+.profile-card textarea{
+
+    resize:none;
+
+}
+
+/* Achievement */
+
+.achievement-input{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:15px;
+
+}
+
+.achievement-input input{
+
+    flex:1;
+
+}
+
+.achievement-input button{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:#8b5cf6;
+
+    color:white;
+
+    transition:.3s;
+
+    font-weight:bold;
+
+}
+
+.achievement-input button:hover{
+
+    background:#7c3aed;
+
+}
+
+.achievement-list{
+
+    margin-top:20px;
+
+}
+
+.achievement-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#111827;
+
+    border:1px solid #374151;
+
+    border-radius:10px;
+
+    padding:12px 15px;
+
+    margin-bottom:12px;
+
+}
+
+.achievement-item span{
+
+    word-break:break-word;
+
+}
+
+.achievement-item button{
+
+    width:35px;
+    height:35px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:#ef4444;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.achievement-item button:hover{
+
+    background:#dc2626;
+
+}
+
+/* Save Button */
+
+.save-btn{
+
+    width:100%;
+
+    margin-top:30px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:#10b981;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.save-btn:hover{
+
+    background:#059669;
+
+    transform:translateY(-2px);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .profile-container{
+
+        padding:20px;
+
+    }
+
+    .profile-card{
+
+        padding:25px;
+
+    }
+
+    .big-avatar{
+
+        width:140px;
+        height:140px;
+
+    }
+
+    .avatar-img{
+
+        width:60px;
+        height:60px;
+
+    }
+
+    .achievement-input{
+
+        flex-direction:column;
+
+    }
+
+    .achievement-input button{
+
+        width:100%;
+
+    }
+
+}

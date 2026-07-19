@@ -1,0 +1,116 @@
+:root {
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --navbar-bg: #ffffff;
+  --sidebar-bg: #ffffff;
+
+  --text-color: #111827;
+  --secondary-text: #6b7280;
+
+  --primary: #8b5cf6;
+  --primary-hover: #7c3aed;
+
+  --border-color: #e5e7eb;
+  --code-bg: #f9fafb;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --card-bg: #1f2937;
+  --navbar-bg: #111827;
+  --sidebar-bg: #111827;
+
+  --text-color: #ffffff;
+  --secondary-text: #9ca3af;
+
+  --primary: #8b5cf6;
+  --primary-hover: #7c3aed;
+
+  --border-color: #374151;
+  --code-bg: #111827;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body{
+
+    margin:0;
+    background:var(--bg-color);
+    color:var(--text-color);
+
+    transition:.3s;
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+pre,
+code {
+  background: var(--code-bg);
+  color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* ===========================
+   LIGHT THEME
+=========================== */
+
+body.light{
+
+    --bg-color:#f5f7fb;
+    --card-color:#ffffff;
+    --text-color:#111827;
+    --secondary-text:#4b5563;
+    --border:#d1d5db;
+
+}
+
+/* ===========================
+   DARK THEME
+=========================== */
+
+body.dark{
+
+    --bg-color:#0f172a;
+    --card-color:#1f2937;
+    --text-color:#ffffff;
+    --secondary-text:#d1d5db;
+    --border:#374151;
+
+}
