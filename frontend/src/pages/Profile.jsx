@@ -8,15 +8,16 @@ import Sidebar from "../components/Sidebar";
 function Profile() {
 
   const avatars = [
-  "/avatars/avatar1.png",
-  "/avatars/avatar2.png",
-  "/avatars/avatar3.png",
-  "/avatars/avatar4.png",
-  "/avatars/avatar5.png",
-  "/avatars/avatar6.png",
-  "/avatars/avatar7.png",
-  "/avatars/avatar8.png",
-];
+    "/avatars/avatar1.png",
+    "/avatars/avatar2.png",
+    "/avatars/avatar3.png",
+    "/avatars/avatar4.png",
+    "/avatars/avatar5.png",
+    "/avatars/avatar6.png",
+    "/avatars/avatar7.png",
+    "/avatars/avatar8.png",
+  ];
+
   const [profile, setProfile] = useState({
     avatar: "/avatars/avatar1.png",
     name: "",
@@ -38,7 +39,7 @@ function Profile() {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        "http://localhost:5000/api/profile",
+        `${import.meta.env.VITE_API_URL}/api/profile`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -47,19 +48,11 @@ function Profile() {
       );
 
       setProfile({
-        avatar:
-          res.data.user.avatar ||
-          "/avatars/avatar1.png",
-
+        avatar: res.data.user.avatar || "/avatars/avatar1.png",
         name: res.data.user.name,
-
         email: res.data.user.email,
-
-        about:
-          res.data.user.about || "",
-
-        achievements:
-          res.data.user.achievements || [],
+        about: res.data.user.about || "",
+        achievements: res.data.user.achievements || [],
       });
 
     } catch (err) {
@@ -69,7 +62,8 @@ function Profile() {
     }
 
   };
-    const addAchievement = () => {
+
+  const addAchievement = () => {
 
     if (!newAchievement.trim()) return;
 
@@ -105,7 +99,7 @@ function Profile() {
       const token = localStorage.getItem("token");
 
       const res = await axios.put(
-        "http://localhost:5000/api/profile",
+        `${import.meta.env.VITE_API_URL}/api/profile`,
         {
           avatar: profile.avatar,
           about: profile.about,
@@ -172,7 +166,7 @@ function Profile() {
                 <div className="avatar-list">
 
                   {avatars.map((avatar) => (
-                                        <img
+                    <img
                       key={avatar}
                       src={avatar}
                       alt="Avatar"
@@ -188,14 +182,11 @@ function Profile() {
                         })
                       }
                     />
-
                   ))}
 
                 </div>
 
               </div>
-
-              {/* Name */}
 
               <label>Name</label>
 
@@ -205,8 +196,6 @@ function Profile() {
                 disabled
               />
 
-              {/* Email */}
-
               <label>Email</label>
 
               <input
@@ -214,8 +203,6 @@ function Profile() {
                 value={profile.email}
                 disabled
               />
-
-              {/* About */}
 
               <label>About</label>
 
@@ -231,8 +218,6 @@ function Profile() {
                 }
               />
 
-              {/* Achievements */}
-
               <h3>🏆 Achievements</h3>
 
               <div className="achievement-input">
@@ -246,9 +231,7 @@ function Profile() {
                   }
                 />
 
-                <button
-                  onClick={addAchievement}
-                >
+                <button onClick={addAchievement}>
                   ➕ Add
                 </button>
 
@@ -278,7 +261,8 @@ function Profile() {
                 ))}
 
               </div>
-                            <button
+
+              <button
                 className="save-btn"
                 onClick={saveProfile}
               >

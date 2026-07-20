@@ -31,7 +31,7 @@ function Settings() {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        "http://localhost:5000/api/auth/profile",
+        `${import.meta.env.VITE_API_URL}/api/auth/profile`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -66,7 +66,7 @@ function Settings() {
       const token = localStorage.getItem("token");
 
       await axios.delete(
-        "http://localhost:5000/api/code-review/delete-all",
+        `${import.meta.env.VITE_API_URL}/api/code-review/delete-all`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
