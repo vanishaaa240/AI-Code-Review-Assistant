@@ -78,11 +78,12 @@ Code:
 ${code}
 `;
 
-  try {
+ 
+try {
 
     const completion = await groq.chat.completions.create({
 
-      model: "llama-3.3-70b-versatile",
+      model: "openai/gpt-oss-120b",
 
       messages: [
         {
@@ -94,6 +95,8 @@ ${code}
       temperature: 0.2,
 
     });
+
+
 
     const text = completion.choices[0].message.content;
 
