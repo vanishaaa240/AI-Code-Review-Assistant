@@ -1,76 +1,433 @@
-.settings-container{
-    padding:30px;
-    color:white;
+
+.settings-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 35px;
+  color: var(--text-color);
 }
 
-.settings-container h1{
-    margin-bottom:30px;
-    color:#8b5cf6;
+/* Page Header */
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 38px;
+  padding: 30px;
+  background: linear-gradient(120deg, #21143d, #35145c, #241044);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 20px;
+  color: white;
 }
 
-.setting-card{
-    background:#1f2937;
-    border:1px solid #374151;
-    border-radius:15px;
-    padding:25px;
-    margin-bottom:25px;
-    transition:.3s;
+.settings-eyebrow {
+  color: #c4b5fd;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
-.setting-card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 25px rgba(0,0,0,.3);
+.settings-header h1 {
+  margin: 10px 0;
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
 }
 
-.setting-card h3{
-    color:#8b5cf6;
-    margin-bottom:15px;
+.settings-header p {
+  color: #c4b5fd;
+  font-size: 14px;
 }
 
-.setting-card p{
-    color:#d1d5db;
-    margin-bottom:10px;
-    line-height:1.6;
+.settings-header-icon {
+  width: 75px;
+  height: 75px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  font-size: 34px;
 }
 
-.setting-card ul{
-    margin-top:10px;
-    padding-left:20px;
+/* Sections */
+.settings-section {
+  margin-bottom: 30px;
 }
 
-.setting-card li{
-    margin-bottom:8px;
-    color:#d1d5db;
+.settings-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 15px;
 }
 
-.danger-btn{
-    margin-top:15px;
-    background:#ef4444;
-    color:white;
-    border:none;
-    padding:12px 22px;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:15px;
-    font-weight:600;
-    transition:.3s;
+.settings-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 12px;
+  font-size: 20px;
 }
 
-.danger-btn:hover{
-    background:#dc2626;
-    transform:translateY(-2px);
+.settings-section-heading h2 {
+  color: var(--text-color);
+  font-size: 17px;
+  margin-bottom: 4px;
 }
 
-body.light .setting-card{
-    background:white;
-    border:1px solid #d1d5db;
+.settings-section-heading p {
+  color: var(--secondary-text);
+  font-size: 12px;
 }
 
-body.light .setting-card p,
-body.light .setting-card li{
-    color:#374151;
+/* Cards */
+.setting-card {
+  background: var(--card-color);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  transition: border-color 0.25s ease, transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-body.light .settings-container{
-    color:#111827;
+.setting-card:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(109, 40, 217, 0.08);
+}
+
+.setting-info h3,
+.setting-card h3 {
+  color: var(--text-color);
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.setting-info p {
+  color: var(--secondary-text);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Account */
+.account-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.account-avatar {
+  width: 65px;
+  height: 65px;
+  min-width: 65px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #7c3aed, #c026d3);
+  color: white;
+  font-size: 26px;
+  font-weight: 800;
+  border-radius: 18px;
+}
+
+.account-details {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.account-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.account-field span {
+  color: var(--secondary-text);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.account-field strong {
+  color: var(--text-color);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.account-status,
+.ai-status {
+  color: #22c55e;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Appearance */
+.appearance-card,
+.danger-card,
+.logout-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.current-theme {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 11px;
+  border-radius: 7px;
+  background: rgba(139, 92, 246, 0.12);
+  color: #a78bfa;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.theme-setting-btn {
+  padding: 12px 18px;
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  border-radius: 9px;
+  background: linear-gradient(110deg, #7c3aed, #9333ea);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.theme-setting-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.3);
+}
+
+/* AI Configuration */
+.ai-model-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ai-model-icon {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #7c3aed, #c026d3);
+  color: white;
+  font-size: 27px;
+}
+
+.ai-label {
+  color: #a78bfa;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.ai-model-info h3 {
+  margin: 5px 0;
+  color: var(--text-color);
+  font-size: 17px;
+}
+
+.ai-model-info p {
+  color: var(--secondary-text);
+  font-size: 12px;
+}
+
+.ai-status {
+  margin-left: auto;
+}
+
+.settings-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 24px 0;
+}
+
+.languages-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.languages-heading h3 {
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.languages-heading span {
+  color: var(--secondary-text);
+  font-size: 11px;
+}
+
+.language-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.language-tag {
+  padding: 9px 15px;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: 8px;
+  background: rgba(139, 92, 246, 0.09);
+  color: #a78bfa;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Privacy */
+.danger-card {
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.danger-card:hover {
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+.danger-btn {
+  padding: 12px 17px;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 9px;
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef6b75;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.danger-btn:hover {
+  background: #dc3545;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Logout */
+.logout-setting-btn {
+  padding: 12px 22px;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 9px;
+  background: transparent;
+  color: #ef6b75;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+
+.logout-setting-btn:hover {
+  background: #dc3545;
+  color: white;
+}
+
+/* Footer */
+.settings-footer {
+  padding: 25px 0 10px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  margin-top: 35px;
+}
+
+.settings-footer span {
+  color: #a78bfa;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.settings-footer p {
+  margin-top: 7px;
+  color: var(--secondary-text);
+  font-size: 11px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 18px;
+  }
+
+  .settings-header {
+    padding: 22px;
+  }
+
+  .settings-header h1 {
+    font-size: 26px;
+  }
+
+  .settings-header-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 25px;
+  }
+
+  .account-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .account-details {
+    flex-basis: 100%;
+    gap: 18px;
+  }
+
+  .appearance-card,
+  .danger-card,
+  .logout-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ai-model-info {
+    flex-wrap: wrap;
+  }
+
+  .ai-status {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-container {
+    padding: 13px;
+  }
+
+  .settings-header {
+    padding: 18px;
+  }
+
+  .settings-header-icon {
+    display: none;
+  }
+
+  .setting-card {
+    padding: 18px;
+  }
+
+  .account-details {
+    flex-direction: column;
+  }
+
+  .theme-setting-btn,
+  .danger-btn,
+  .logout-setting-btn {
+    width: 100%;
+  }
+
+  .languages-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }

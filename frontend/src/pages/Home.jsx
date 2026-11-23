@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import "./Home.css";
@@ -14,7 +15,6 @@ import {
 } from "../services/codeReviewService";
 
 function Home() {
-
   const [language, setLanguage] = useState("C++");
   const [code, setCode] = useState("");
   const [feedback, setFeedback] = useState(null);
@@ -35,14 +35,12 @@ function Home() {
   };
 
   const handleReview = async () => {
-
     if (!code.trim()) {
       toast.warning("Please paste your code first!");
       return;
     }
 
     try {
-
       setLoading(true);
 
       const data = await reviewCode({
@@ -52,58 +50,101 @@ function Home() {
 
       setFeedback(data.review.feedback);
 
-      fetchStats();
+      await fetchStats();
 
       toast.success("Code Reviewed Successfully!");
-
     } catch (error) {
-
       console.error(error);
 
       toast.error(
-        error.response?.data?.message ||
-        "Review Failed"
+        error.response?.data?.message || "Review Failed"
       );
-
     } finally {
-
       setLoading(false);
-
     }
-
   };
 
   return (
     <div className="home">
-
       <Navbar />
 
       <div className="main-layout">
-
         <Sidebar />
 
-        <div className="content">
+        <main className="content">
 
-          <DashboardStats stats={stats} />
+          {/* Welcome Section */}
+          <section className="dashboard-heading">
+            <div>
+              <span className="dashboard-eyebrow">
+                ✦ AI-POWERED CODE ANALYSIS
+              </span>
 
-          <Editor
-            language={language}
-            setLanguage={setLanguage}
-            code={code}
-            setCode={setCode}
-            handleReview={handleReview}
-            loading={loading}
-          />
+              <h1 className="dashboard-title">
+                Welcome to <span>ReviewAI</span>
+              </h1>
 
-          <Feedback
-            feedback={feedback}
-            language={language}
-          />
+              <p className="dashboard-description">
+                Write better code. Find bugs faster.
+                Improve your programming skills with AI.
+              </p>
+            </div>
 
-        </div>
+            <div className="dashboard-status">
+              <span className="status-dot"></span>
+              AI Engine Ready
+            </div>
+          </section>
 
+          {/* Dashboard Statistics */}
+          <section className="dashboard-stats-section">
+            <div className="section-heading">
+              <div>
+                <h2>Your Overview</h2>
+                <p>Track your coding progress</p>
+              </div>
+            </div>
+
+            <DashboardStats stats={stats} />
+          </section>
+
+          {/* Code Editor */}
+          <section className="editor-section">
+            <div className="section-heading">
+              <div>
+                <h2>Code Workspace</h2>
+                <p>
+                  Submit your code and let AI analyze it.
+                </p>
+              </div>
+
+              <span className="workspace-tag">
+                ✦ AI Workspace
+              </span>
+            </div>
+
+            <Editor
+              language={language}
+              setLanguage={setLanguage}
+              code={code}
+              setCode={setCode}
+              handleReview={handleReview}
+              loading={loading}
+            />
+          </section>
+
+          {/* AI Feedback */}
+          {feedback && (
+            <section className="feedback-section">
+              <Feedback
+                feedback={feedback}
+                language={language}
+              />
+            </section>
+          )}
+
+        </main>
       </div>
-
     </div>
   );
 }
